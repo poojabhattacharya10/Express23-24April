@@ -1,0 +1,52 @@
+<!-- <%  %> :: processing code of ejs in it--> 
+<%- include ('./base/header.ejs')   %>
+
+<div class="container">
+    <div class="alert bg-success my-3">
+        <h4 class="text-center" style="color: white"> Create New Student </h4>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <form action="/student/create" method="post">
+                    <div class="field my-3">
+                        <label for="" class="form-label">RollNo</label>
+                        <input type="text" class="form-control" name="rollNo" placeholder="Enter RollNo">
+                        <!-- name :: req.body.rollNo -->
+                    </div>
+
+                    <div class="field my-3">
+                        <label for="" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Name">
+                        <!-- name :: req.body.name -->
+                    </div>
+
+                    <div class="field my-3">
+                        <label for="" class="form-label">Father Name</label>
+                        <input type="text" class="form-control" name="fatherName" placeholder="Enter Father Name">
+                        <!-- name :: req.body.fatherName -->
+                    </div>
+
+                    <div class="field my-3">
+                        <label for="" class="form-label">Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter Address">
+                    </div> 
+
+                    <div class="field my-3">
+                        <label for="" class="form-label">MobileNo</label>
+                        <input type="text" class="form-control" name="mobileNo" placeholder="Enter Mobile No">
+                    </div>
+
+                    <input type="submit" value="create" class="btn btn-warning my-3 w-100">
+
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+<%- include ('./base/footer.ejs')   %>    
